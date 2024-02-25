@@ -3,6 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 
 import authRoute from "./routes/auth.routes.js";
+import connetToMongoBD from "./db/connetToMongoDB.js";
 
 const app = express();
 
@@ -16,4 +17,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoute);
 
-app.listen(PORT, console.log(`App Run IN PORT ${PORT}`));
+app.listen(PORT, () => {
+  connetToMongoBD();
+  console.log(`App Run IN PORT ${PORT}`);
+});
