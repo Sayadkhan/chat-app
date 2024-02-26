@@ -1,21 +1,21 @@
 import express from "express";
-
 import dotenv from "dotenv";
 
 import authRoute from "./routes/auth.routes.js";
 import connetToMongoBD from "./db/connetToMongoDB.js";
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+app.use(express.json());
+
+app.use("/api/auth", authRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello Eexpress");
 });
-
-app.use("/api/auth", authRoute);
 
 app.listen(PORT, () => {
   connetToMongoBD();
