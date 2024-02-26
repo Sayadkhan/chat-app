@@ -1,2 +1,7 @@
-MONGO_DB_URI= mongodb+srv://abdullahalsayad03:wGe02e67W0OgzL9e@cluster0.z3vxjgk.mongodb.net/chat-app?retryWrites=true&w=majority
+
 PORT = 8000
+JWT_SECRET = UdMaHdFGhsCGtX1QidJcacR8mlz4a48ZRkE1ikOIsWg=
+
+MONGO_DB_URI= mongodb+srv://abdullahalsayad03:wGe02e67W0OgzL9e@cluster0.z3vxjgk.mongodb.net/chat-app?retryWrites=true&w=majority
+
+NODE_ENV = development
